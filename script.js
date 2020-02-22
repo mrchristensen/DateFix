@@ -6,9 +6,15 @@ function formatMeal(json) {
 	let obj = json.meals[0];
 	let results = "";
 
-	results += "<h2>" + obj.strMeal + "</h2>"
-	        + "<h4>" + obj.strCategory + " 	" 
-			          + obj.strArea + "</h4>"
+	if(obj.strCategory != "Dessert") {
+		results += "<h2>Dinner - " 
+	}
+	else {
+		results += "<h2>Dessert - "
+	}
+
+	results += obj.strMeal + "</h2>"
+	        + "<h4>" + obj.strArea + "</h4>"
 	        + "<img style=\"height: 256px;\" src=\"" 
 			+ obj.strMealThumb + "\"/>"
 	        + "<h4>Ingredients</h4>"
@@ -26,7 +32,7 @@ function formatMeal(json) {
 			+ "<p>" + obj.strInstructions + "</p>";
 
 	if(obj.strYoutube != null) {
-		results += "<p>Get more instruction <a href=\"" + obj.strYoutube 
+		results += "<p>See more instructions <a href=\"" + obj.strYoutube 
 		        + "\">here</a></p>";
 	}
 	if(obj.strSource != null) {
@@ -60,7 +66,7 @@ function setUp() {
 				});
 		}
 
-		fetchURL(true);
 		fetchURL(false);
+		fetchURL(true);
 	});
 }
