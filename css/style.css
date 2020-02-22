@@ -43,6 +43,7 @@ button:hover, img:not(#logo):hover {
 
 #logo {
     max-height: inherit;
+    padding-left: 10px;
 }
 
 .header {
