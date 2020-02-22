@@ -5,6 +5,7 @@
     /* margin-bottom: 400px; */
     padding: 0;
     box-sizing: border-box;
+    font-color: #606060;
 }
 
 h1, h2, p {
@@ -22,13 +23,15 @@ img {
 
 button {
     font-size: 18px;
+    font-weight: bold;
     padding: 6px 12px;
     width: fit-content;
     height: fit-content;
-    background-color: white;
-    color: black;
-    border: 2px solid lightgray;
+    background-color: #e19093;
+    font-weight: bold;
+    color: #ffffff;
     border-radius: 12px;
+    border: none;
     /* Safari */
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -36,6 +39,7 @@ button {
 
 button:hover, img:not(#logo):hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: #e08082;
 }
 
 

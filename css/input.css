@@ -1,20 +1,3 @@
-/*header*/
-
-#logo {
-    max-height: inherit;
-}
-
-.header {
-    background-color: #e6d9d0;
-    max-height: 100px;
-}
-
-* {
-	font-color: #606060;
-}
-
-/*input*/
-
 .input-box {
     display: flex;
     flex-direction: row;
@@ -30,13 +13,9 @@
 }
 
 #get-meal-button {
-	border-radius: 8px;
-	border: none;
-	background-color: #e19093;
-	font-weight: bold;
-	color: #ffffff;
-	width: 200px;
-	height: 100px;
+    font-weight: bold;
+    width: 200px;
+    height: 100px;
 }
 
 #get-meal-button:hover {
@@ -44,35 +23,37 @@
 }
 
 .input-box {
-	width: 30%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
 
 /*recipes*/
 
 .recipe {
-	background-color: #e6d9d0;
-	text-align: center;
-	border-radius: 8px;
-	float: left;
+    background-color: #e6d9d0;
+    text-align: center;
+    border-radius: 8px;
+    float: left;
     width: 40%;
     margin: 32px;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .recipe-container {
-	width: 80%;
-	margin-right: auto;
-	margin-left: auto;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
 }
+
 
 /*footer*/
 
@@ -94,6 +75,3 @@ ul {
     padding-right: 50px;
     font-size: 1em;
 }
-
-
-
