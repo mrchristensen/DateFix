@@ -1,0 +1,25 @@
+#intro {
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 19px;
+    margin-right: 19px;
+    text-align: center;
+}
+
+#intro-desc {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 42px;
+    padding-right: 42px;
+}
+
+#cooking-picture {
+    max-width: 1000px;
+}
+
+#get-started-button {
+    align-self: center;
+}

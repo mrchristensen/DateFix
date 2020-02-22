@@ -1,8 +1,41 @@
+/* General */
+
 * {
     margin: 0;
     /* margin-bottom: 400px; */
     padding: 0;
     box-sizing: border-box;
+}
+
+h1, h2, p {
+    color: #606060;
+}
+
+img {
+    border-radius: 12px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+
+/* Button */
+
+button {
+    font-size: 18px;
+    padding: 6px 12px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    color: black;
+    border: 2px solid lightgray;
+    border-radius: 12px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:hover, img:not(#logo):hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -15,86 +48,29 @@
 .header {
     background-color: #e6d9d0;
     max-height: 100px;
+    width: 100%;
 }
 
 
-/* index */
-
-#intro {
-    height: inherit;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    margin-left: 19px;
-    margin-right: 19px;
-}
+/* Page Structure */
 
 #main-page-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-
-#cooking-picture {
-    max-width: 1000px;
-}
-
-img {
-    border-radius: 12px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-}
-
-#get-started-button {
-    align-self: flex-end;
-    margin-top: auto;
-    margin-bottom: 4px;
-}
-
-body {
-    /* background-image: url(../images/cooking-couple.jpeg); */
-    /* background-repeat: no-repeat;
-    background-size: auto; */
-    /* background-size: cover */
-}
-
-.card {
-    width: 95%;
-    height: fit-content;
-    background-color: #f2f2f2;
-    border: 2px solid #28A744;
-    border-radius: 12px;
-    padding: 8px 16px;
-    /* margin: 19px; */
-    margin: 0 auto;
+    margin: 26px;
 }
 
 #page-container {
     position: relative;
     min-height: 100vh;
+    width: inherit;
 }
 
 #content-wrap {
     padding-bottom: 19px;
+    width: inherit;
     /* Footer height */
-}
-
-
-/* input */
-
-.input-box {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-}
-
-#inputs {
-    margin: 3em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
 }
 
 
@@ -142,26 +118,4 @@ body {
         align-items: center;
         text-align: center;
     }
-}
-
-
-/* Button */
-
-button {
-    font-size: 18px;
-    padding: 6px 12px;
-    margin-left: 10px;
-    width: fit-content;
-    height: fit-content;
-    background-color: white;
-    color: black;
-    border: 2px solid lightgray;
-    border-radius: 12px;
-    /* Safari */
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-}
-
-button:hover, img:not(#logo):hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
