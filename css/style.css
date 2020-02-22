@@ -59,13 +59,6 @@ button:hover, img:not(#logo):hover {
 
 /* Page Structure */
 
-#main-page-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 26px;
-}
-
 #page-container {
     position: relative;
     min-height: 100vh;
