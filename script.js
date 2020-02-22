@@ -2,29 +2,65 @@ window.onload = function() {
 	setUp();
 }
 
-function setUp() {
-	// FIXME - get ID
-	document.getElementById("get-meal-button").addEventListener("click", function(event) {
-		event.preventDefault();
+function formatMeal(json) {
+	let obj = json.meals[0];
+	let results = "";
 
-		// FIXME - change is so that we get a desert and/or manin course
-		const url = "https://www.themealdb.com/api/json/v1/1/random.php";
-		fetch(url) 
-			.then(function(response) {
-				return response.json();
-			}).then(function(json) {
-				console.log(json);
-				let results = "";
-				results += "<h2>" + json.meals[0].strMeal + "</h2>";
-				results += "<h4>" + json.meals[0].strCategory + " 	" 
-						          + json.meals[0].strArea + "</h4>";
-				results += "<img style=\"height: 256px;\" src=\"" 
-						+ json.meals[0].strMealThumb + "\"/>"; 
+	results += "<h2>" + obj.strMeal + "</h2>"
+	        + "<h4>" + obj.strCategory + " 	" 
+			          + obj.strArea + "</h4>"
+	        + "<img style=\"height: 256px;\" src=\"" 
+			+ obj.strMealThumb + "\"/>"
+	        + "<h4>Ingredients</h4>"
+	        + "<ul>";
+	for(var i = 1; i <= 20; i++) {
+		let currentItem = "strIngredient" + i;
+		let measure = "strMeasure" + i;
+		if(obj[currentItem] == "" || obj[currentItem] == null || obj[currentItem] == " ") {
+			break;
+		}
+		results += "<li>" + obj[measure] + " " + obj[currentItem] + "</li>";
+	}
+	results += "</ul>"
+			+ "<h4>Instructions</h4>"
+			+ "<p>" + obj.strInstructions + "</p>";
 
-				document.getElementById("meal").innerHTML = results;
-			});
-	});
+	if(obj.strYoutube != null) {
+		results += "<p>Get more instruction <a href=\"" + obj.strYoutube 
+		        + "\">here</a></p>";
+	}
+	if(obj.strSource != null) {
+		results += "<p>Set the full recipe <a href=\"" + obj.strSource 
+		        + "\">here</a></p>";
+	}
+
+	return results;
 }
 
+function setUp() {
+	document.getElementById("get-meal-button").addEventListener("click", function(event) {
+		event.preventDefault();
+		const url = "https://www.themealdb.com/api/json/v1/1/random.php";
 
-// meal and dessert
+		var fetchURL = function(isDessert) {
+			fetch(url) 
+				.then(function(response) {
+					return response.json();
+				}).then(function(json) {
+					if((!isDessert && json.meals[0].strCategory != "Dessert") ||
+						(isDessert && json.meals[0].strCategory == "Dessert")) {
+						console.log(json);
+
+						document.getElementById(isDessert ? "dessert" : "meal")
+							.innerHTML = formatMeal(json);
+					}
+					else { //not a valid fetch
+						fetchURL(isDessert);
+					}
+				});
+		}
+
+		fetchURL(true);
+		fetchURL(false);
+	});
+}
