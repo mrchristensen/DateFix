@@ -4,7 +4,7 @@ window.onload = function() {
 
 function setUp() {
 	// FIXME - get ID
-	document.getElementById("").addEventListener("click", function(event) {
+	document.getElementById("get-meal-button").addEventListener("click", function(event) {
 		event.preventDefault();
 
 		// FIXME - change is so that we get a desert and/or manin course
@@ -14,6 +14,19 @@ function setUp() {
 				return response.json();
 			}).then(function(json) {
 				console.log(json);
+				let results = "";
+				results += "<h2>" + json.meals[0].strMeal + "</h2>";
+				results += "<h4>" + json.meals[0].strCategory + " 	" 
+						          + json.meals[0].strArea + "</h4>";
+				// let thumbnail = ;
+				// thumbnail = thumbnail.substring(0, thumbnail.length - 1);
+				results += "<img style=\"height: 256px;\" src=\"" 
+						+ json.meals[0].strMealThumb + "\"/>"; 
+
+				document.getElementById("meal").innerHTML = results;
 			});
 	});
 }
+
+
+// meal and dessert
