@@ -101,22 +101,4 @@ button:hover, img:not(#logo):hover {
 
 /* Mobile Styles */
 
-@media only screen and (max-width: 425px) {
-    body {
-        background-color: white;
-    }
-    .header {
-        display: flex;
-        justify-content: space-between;
-    }
-    .header-element {
-        font-size: 14.899px;
-        padding: 0;
-        margin: 0;
-    }
-    .weather {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
+@media only screen and (max-width: 425px) {}
