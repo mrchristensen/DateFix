@@ -10,43 +10,46 @@
 </head>
 
 <body>
-    <!-- Make this the logo in a bar at the top by the end -->
-    <h1>DateFix</h1>
+    <div id="page-container">
+        <div id="content-wrap">
+            <div class="header">
+                <img id="logo" src="images\logo.png" alt="DataFix Logo">
+            </div>
 
-    <h2>Instructions</h2>
+            <h2>Instructions</h2>
 
-    <p>To find the perfect meal for your next date, simply enter your names bellow and we'll find the perfect match (including a main dish and a dessert! Money back guarantee!</p>
+            <p>To find the perfect meal for your next date, simply enter your names bellow and we'll find the perfect match (including a main dish and a dessert! Money back guarantee!</p>
 
-    <div id="inputs">
+            <div id="inputs">
 
-        <div class="input-box">
-            <p>Your name:</p>
-            <input id="nameInput" type="text"></input>
+                <div class="input-box">
+                    <p>Your name:</p>
+                    <input id="nameInput" type="text"></input>
+                </div>
+
+                <div class="input-box">
+                    <p>Your special someone's name:</p>
+                    <input id="partnerNameInput" type="text"></input>
+                </div>
+
+                <button id="get-meal-button">Get the Perfect Meal</button>
+            </div>
+
+            <hr>
+
+            <div class="recipe" id="meal"></div>
+
+            <div class="recipe" id="dessert"></div>
+        </div>
+        <div class="footer">
+            <p id="footer-text">Matthew Christensen</p>
+            <p id="footer-text">Cheyenne Son Davis</p>
+            <p id="footer-text"><a href="https://github.com/mrchristensen/DateFix">Repo</a></p>
+            <p id="footer-text">2020</p>
         </div>
 
-        <div class="input-box">
-            <p>Your special someone's name:</p>
-            <input id="partnerNameInput" type="text"></input>
-        </div>
-
-        <button id="get-meal-button">Get the Perfect Meal</button>
+        <script text="type/javascript" src="/script.js"></script>
     </div>
-
-    <hr>
-
-    <div class="recipe" id="meal"></div>
-
-    <div class="recipe" id="dessert"></div>
-
-    <div class="footer">
-        <p id="footer-text">Matthew Christensen</p>
-        <p id="footer-text">Cheyenne Son Davis</p>
-        <p id="footer-text"><a href="https://github.com/mrchristensen/DateFix">Repo</a></p>
-        <p id="footer-text">2020</p>
-    </div>
-
-    <script text="type/javascript" src="/script.js"></script>
-
 </body>
 
 </html>

@@ -1,7 +1,82 @@
 * {
     margin: 0;
+    /* margin-bottom: 400px; */
     padding: 0;
     box-sizing: border-box;
+}
+
+
+/* Header */
+
+#logo {
+    max-height: inherit;
+}
+
+.header {
+    max-height: 100px;
+}
+
+
+/* index */
+
+#intro {
+    height: inherit;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-left: 19px;
+    margin-right: 19px;
+}
+
+#main-page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#cooking-picture {
+    max-width: 1000px;
+}
+
+img {
+    border-radius: 12px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#get-started-button {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 4px;
+}
+
+body {
+    /* background-image: url(../images/cooking-couple.jpeg); */
+    /* background-repeat: no-repeat;
+    background-size: auto; */
+    /* background-size: cover */
+}
+
+.card {
+    width: 95%;
+    height: fit-content;
+    background-color: #f2f2f2;
+    border: 2px solid #28A744;
+    border-radius: 12px;
+    padding: 8px 16px;
+    /* margin: 19px; */
+    margin: 0 auto;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 19px;
+    /* Footer height */
 }
 
 
@@ -10,36 +85,39 @@
 .input-box {
     display: flex;
     flex-direction: row;
+    align-content: center;
 }
 
 #inputs {
+    margin: 3em;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-content: center;
 }
 
 
 /* Footer */
 
 .footer {
-    position: fixed;
-    Width: 100%;
+    position: absolute;
     bottom: 0;
-    height: 20px;
-    margin-top: -20px;
+    width: 100%;
+    height: 19px;
+    margin: 0;
+    padding: 0;
+    /* margin-top: -20px; */
     background-color: #e5e5e5;
     display: flex;
     justify-content: space-between;
-    opacity: 50%;
-    transition-duration: .4s;
+    align-content: center;
 }
 
 .footer p {
     padding: 0;
-}
-
-.footer:hover {
-    opacity: 90%;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1em;
 }
 
 
@@ -69,6 +147,7 @@
 /* Button */
 
 button {
+    font-size: 18px;
     padding: 6px 12px;
     margin-left: 10px;
     width: fit-content;
@@ -82,6 +161,6 @@ button {
     transition-duration: 0.4s;
 }
 
-button:hover {
+button:hover, img:not(#logo):hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
