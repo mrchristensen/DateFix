@@ -18,6 +18,8 @@
 
 #cooking-picture {
     max-width: 1000px;
+    width: 80%;
+    height: 80%;
 }
 
 #get-started-button {
