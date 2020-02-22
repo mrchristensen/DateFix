@@ -13,13 +13,8 @@
 }
 
 #get-meal-button {
-    font-weight: bold;
     width: 200px;
     height: 100px;
-}
-
-#get-meal-button:hover {
-    background-color: #e08082;
 }
 
 .input-box {
